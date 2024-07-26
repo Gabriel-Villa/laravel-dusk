@@ -4,12 +4,15 @@ namespace Tests\Browser;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTruncation;
 use Laravel\Dusk\Browser;
 use Tests\Browser\Pages\LoginPage;
 use Tests\DuskTestCase;
 
 class LoginTest extends DuskTestCase
 {
+    use DatabaseTruncation;
+
     /**
      * A Dusk test example.
      */
